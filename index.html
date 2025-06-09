@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Presentación</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div>Hola Mundo</div>
+<body class="bg-gradient-to-br from-indigo-600 to-purple-600 min-h-screen flex items-center justify-center text-white font-sans">
+
+  <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md text-center">
+    <img src="https://i.pravatar.cc/150?img=3" alt="Avatar" class="w-24 h-24 mx-auto rounded-full border-4 border-white shadow-lg">
+    <h1 class="text-3xl font-bold mt-4">Hola, soy Carla</h1>
+    <p class="text-lg mt-2 text-white/80">Desarrolladora Frontend · Amante del diseño · Café adicta</p>
+
+    <div class="mt-4">
+      <button onclick="toggleDetails()" class="mt-4 bg-white text-indigo-600 px-4 py-2 rounded-full font-semibold shadow hover:bg-indigo-100 transition">
+        Ver más
+      </button>
+    </div>
+
+    <div id="details" class="mt-4 hidden transition-opacity duration-500">
+      <p class="text-white/70 mt-2">Me especializo en React y Tailwind. Me encanta construir experiencias web limpias y accesibles.</p>
+      <a href="mailto:carla@example.com" class="block mt-3 underline hover:text-white">📧 Contactar</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      details.classList.toggle('hidden');
+    }
+  </script>
+
 </body>
 </html>
